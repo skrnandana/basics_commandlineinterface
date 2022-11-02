@@ -17,7 +17,7 @@ The goal of the project is to locate a set of messages in the Log File created b
 ## Project Components and Execution:
 Clone the git repository using git clone 
 The project has the following main components.
-## + 1.AkkaService
+### + 1.AkkaService
 
 The REST client is written in scala. It has type of request as GET and POST. 
 It uses the parameters url, T, dT, Pattern to make an request to Lambda. We create an AWS API gateway as the Endpoint as ‘ANY’. Hence it accepts both POST and GET request.
@@ -33,7 +33,7 @@ sbt clean compile test
   <img src="Picture1.jpg" />
 </p>
 
-## + 2.GRPC: 
+## 2.GRPC: 
 
 GRPC Server runs on the port specified in the configuration file. GRPC Server receives request from GRPC Client. The GRPC Server will again invoke lambda server and responds back to the Client. If the process is successful  ,then a success message is shown  ,and if some failure happens, a FAILURE message is shown
 
@@ -100,13 +100,13 @@ sudo ./aws/install
 + Create an S3 bucket and give access to ec2 using S3 Full access IAM policy.
 
 ### API Gateway:
-We create AWS API Gateway as the Endpoint with a ANY(GET, POST) request. It is used to invoke the Lambda function on AWS.
++ We create AWS API Gateway as the Endpoint with a ANY(GET, POST) request. It is used to invoke the Lambda function on AWS.
 
 ### Lambda:
-The Lambda code in C:\Users\ksidda2\Desktop\AWS-HW2\Lambda\Lambda.py should be deployed on AWS Lambda console. We should test and Deploy the Lambda Function.
++ The Lambda code in C:\Users\ksidda2\Desktop\AWS-HW2\Lambda\Lambda.py should be deployed on AWS Lambda console. We should test and Deploy the Lambda Function.
 
 ### IAM Roles and Policies:
-Create a IAM Role with 2 policies, one which allows accessing S3 to Lambda , and the other one which allows accessing EC2 to Lambda.
++ Create a IAM Role with 2 policies, one which allows accessing S3 to Lambda , and the other one which allows accessing EC2 to Lambda.
 
 ## Test Cases:
 
